@@ -1,0 +1,59 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: $main-color;
+  color: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.05) translateY(5px);
+  }
+}
+
+.heading {
+  text-align: center;
+  span {
+    color: $main-color;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: $h2-font;
+  }
+}
+// Padding
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
+
+// Margin
+.my {
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+  &-6 {
+    margin: 6rem 0;
+  }
+  &-8 {
+    margin: 8rem 0;
+  }
+}

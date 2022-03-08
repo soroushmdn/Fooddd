@@ -1,0 +1,32 @@
+// Color Palettes
+$main-color: #ff5200;
+$text-color: #fff;
+$bg-color: #00263b;
+
+// Fonts
+$big-font: 3.5rem;
+$h2-font: 2rem;
+$p-font: 0.9rem;
+
+// General(core) Styles
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+*::selection {
+  background-color: $main-color;
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  line-height: 1.2;
+}

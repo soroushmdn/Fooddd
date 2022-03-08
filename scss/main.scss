@@ -1,0 +1,249 @@
+@import "config";
+@import "utilities";
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+}
+#showcase {
+  height: 100vh;
+
+  // Navbar
+  nav {
+    padding: 1rem 0;
+    background-color: $bg-color;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        color: $main-color;
+        font-weight: 600;
+        font-size: 2.2rem;
+      }
+
+      ul {
+        display: flex;
+        a {
+          color: $text-color;
+          padding: 10px 20px;
+          font-weight: 500;
+          &:hover {
+            color: $main-color;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+
+  .showcase-content {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      align-items: center;
+      height: 100vh;
+    }
+    .showcase-text {
+      h1 {
+        font-size: $big-font;
+        color: $text-color;
+      }
+      h2 {
+        font-size: $h2-font;
+        margin: 1rem 0 2rem;
+      }
+    }
+  }
+}
+#menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+// About
+#about {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+
+    img {
+      width: 400px;
+    }
+  }
+  .about-text {
+    span {
+      color: $main-color;
+      font-weight: 600;
+    }
+    h2 {
+      font-size: $h2-font;
+    }
+    p {
+      margin: 1rem 0 2rem;
+    }
+  }
+}
+
+// Menu
+#menu {
+  .container {
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+      .menu-box {
+        position: relative;
+        margin-top: 3rem;
+        background-color: #feeee7;
+        border-radius: 5px;
+        padding: 1rem;
+
+        img {
+          width: 200px;
+          height: 200px;
+        }
+        h2 {
+          font-size: 1.2rem;
+          color: $bg-color;
+        }
+        h3 {
+          font-weight: 400;
+          color: $bg-color;
+          margin: 0.5rem 0 1rem;
+        }
+        span {
+          color: $main-color;
+          font-weight: 600;
+        }
+        i {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: $main-color;
+          padding: 0.5rem;
+          border-radius: 0 5px 0 5px;
+        }
+      }
+    }
+  }
+}
+// Services
+#services {
+  .container {
+    .service-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+      .service-box {
+        margin-top: 3rem;
+        padding: 1rem;
+        img {
+          width: 90px;
+        }
+        h3 {
+          margin: 0.5rem 0;
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+
+// Cta
+#cta {
+  .cta {
+    background-color: #feeee7;
+    text-align: center;
+    border-radius: 10px;
+    h2 {
+      font-size: 2rem;
+      color: $bg-color;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+// Footer
+#main-footer {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    .footer-box {
+      h4 {
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+        border-bottom: solid 2px $main-color;
+        display: inline-block;
+      }
+      li {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+        a {
+          color: lighten($bg-color, 20%);
+          display: block;
+          transition: 0.5s;
+          &:hover {
+            color: lighten($bg-color, 40%);
+            transform: translateX(-10px);
+          }
+        }
+      }
+      .social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          // height: 40px;
+          // width: 40px;
+          // display: inline-flex;
+          // justify-content: center;
+          // align-items: center;
+          i {
+            background-color: $main-color;
+            color: $text-color;
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            transition: 0.5s;
+            &:hover {
+              transform: scale(1.2);
+              background-color: $text-color;
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// animaition
+#showcase .showcase-content .showcase-text {
+  h1 {
+    animation: colorSide 2s forwards ease-in-out;
+  }
+}
+@keyframes colorSide {
+  to {
+    color: $main-color;
+  }
+}
+
+// media
+@import "media";
